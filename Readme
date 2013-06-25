@@ -1,0 +1,5 @@
+This is a tiny Python project for training Git.
+
+This program acts as a "virtual" web site, and provides some APIs to its "client".
+
+A set of [slides](http://gh.kfei.net) using this project is also available.
