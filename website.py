@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import sys
-import argparse
+from args import get_args
 
 class Website:
     def __init__(self):
@@ -12,10 +12,10 @@ class Website:
 
 if __name__ == '__main__':
     # Parsing arguments.
-    parser = argparse.ArgumentParser()
-    parser.add_argument("username", help="the username used to log in to the website")
-    args = parser.parse_args()
+    args = get_args()
 
     # Create a website and show its contents to clients.
     w = Website()
+
+    # Show home page to clients.
     w.home(args.username)
