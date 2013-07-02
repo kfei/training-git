@@ -14,6 +14,9 @@ class Website:
         with open("visit.log", "a") as log:
             log.write('User %s has visited. \n' % self.username)
 
+    def login(self):
+        print 'You are now logged in as %s' % self.username
+
 if __name__ == '__main__':
     # Parsing arguments.
     args = get_args()
@@ -26,3 +29,6 @@ if __name__ == '__main__':
 
     # Show home page to clients.
     w.home()
+
+    # Perform a login action
+    if args.login: w.login()
