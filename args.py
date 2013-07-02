@@ -6,4 +6,7 @@ def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("username",
                          help="the username used to log in to the website")
+    parser.add_argument("--as-boss",
+                        help="visit the website as boss",
+                        action="store_true")
     return parser.parse_args()

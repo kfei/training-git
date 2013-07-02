@@ -19,7 +19,7 @@ if __name__ == '__main__':
     args = get_args()
 
     # Create a website and show its contents to clients.
-    w = Website(args.username)
+    w = Website('my dear BOSS' if args.as_boss else args.username)
 
     # Log this visit
     w.logger()
