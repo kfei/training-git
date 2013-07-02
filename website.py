@@ -17,6 +17,9 @@ class Website:
     def login(self):
         print 'You are now logged in as %s' % self.username
 
+    def logout(self):
+        print 'Bye %s! You have successfully logged out.' % self.username
+
 if __name__ == '__main__':
     # Parsing arguments.
     args = get_args()
@@ -32,3 +35,6 @@ if __name__ == '__main__':
 
     # Perform a login action
     if args.login: w.login()
+
+    # Perform a logout action
+    if args.logout: w.logout()
