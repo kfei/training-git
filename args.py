@@ -9,4 +9,10 @@ def get_args():
     parser.add_argument("--as-boss",
                         help="visit the website as boss",
                         action="store_true")
+    parser.add_argument("--login",
+                        help="log in to the website",
+                        action="store_true")
+    parser.add_argument("--logout",
+                        help="log out the website",
+                        action="store_true")
     return parser.parse_args()
