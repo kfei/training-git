@@ -19,6 +19,12 @@ class Website:
 
     def logout(self):
         print 'Bye %s! You have successfully logged out.' % self.username
+    
+    def show_stats(self):
+        with open('visit.log', 'r') as log:
+            all_log = [x.strip("\n") for x in log.readlines()]
+            user_log = [i for i in all_log if self.username in i]
+            print 'You have visited this web site %d times.' % len(user_log)
 
 if __name__ == '__main__':
     # Parsing arguments.
@@ -35,6 +41,9 @@ if __name__ == '__main__':
 
     # Perform a login action
     if args.login: w.login()
+
+    # Show user statistics
+    if args.view_stats: w.show_stats()
 
     # Perform a logout action
     if args.logout: w.logout()

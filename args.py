@@ -15,4 +15,7 @@ def get_args():
     parser.add_argument("--logout",
                         help="log out the website",
                         action="store_true")
+    parser.add_argument("--view-stats",
+                        help="view your visit statistics on the website",
+                        action="store_true")
     return parser.parse_args()
