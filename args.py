@@ -15,4 +15,7 @@ def get_args():
     parser.add_argument("--logout",
                         help="log out the website",
                         action="store_true")
+    parser.add_argument("--private-mode",
+                        help="tell the web site not to log this visit",
+                        action="store_true")
     return parser.parse_args()
