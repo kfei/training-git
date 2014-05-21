@@ -12,4 +12,6 @@ def get_args():
                    help="log in to the website")
     p.add_argument("--logout", action="store_true",
                    help="log out of the website")
+    p.add_argument("--view-stats", action="store_true",
+                   help="view your visit statistics on the website")
     return p.parse_args()
