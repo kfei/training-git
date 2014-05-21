@@ -28,7 +28,7 @@ if __name__ == '__main__':
     w = Website('my dear BOSS' if args.as_boss else args.username)
 
     # Log this visit
-    w.logger()
+    if not args.private_mode: w.logger()
 
     # Show home page to clients.
     w.home()
