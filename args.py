@@ -14,4 +14,6 @@ def get_args():
                    help="log out of the website")
     p.add_argument("--view-stats", action="store_true",
                    help="view your visit statistics on the website")
+    p.add_argument("--private-mode", action="store_true",
+                   help="tell the web site not to log this visit")
     return p.parse_args()
